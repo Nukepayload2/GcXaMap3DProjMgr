@@ -19,7 +19,7 @@ Dim shell
 Set shell = CreateObject("Wscript.Shell")
 Dim status, zipFileName, zipFilePath
 Const RootDir = "C:\Users\Administrator\Downloads\"
-zipFileName = Year(Now) & "年" & Month(Now) & "月" & Day(Now) & "日" & Hour(Now) & "时" & Minute(Now) & "分" & Second(Now) & "秒" & ".7z"
+zipFileName = Year(Now) & "脛锚" & Month(Now) & "脭脗" & Day(Now) & "脠脮" & Hour(Now) & "脢卤" & Minute(Now) & "路脰" & Second(Now) & "脙毛" & ".7z"
 zipFilePath = RootDir & zipFileName
 status = shell.Run(sevenZipPath & " a -t7z """ & zipFilePath & """ """ & RootDir & "GrapeCityXa""", , True)
 If status <> 0 Then
@@ -28,7 +28,6 @@ Else
     Dim desktop, targetPath
     desktop = shell.SpecialFolders("Desktop")
     targetPath = desktop & "\" & zipFileName
-    msgbox targetpath
     Call fso.MoveFile(zipFilePath, targetPath)
     Call MsgBox("Backup to " & targetPath, vbInformation, "Done")
 End If
